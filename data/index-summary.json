@@ -1,0 +1,12 @@
+{
+  "about": "Counts from the FIA's decision-document pages for the 2025 and 2026 Formula 1 seasons, listed on 21 Oct 2026 (2026 up to the Singapore Grand Prix, 11 Oct). Counted by the first word of each title, so 'infringement' also includes deleted-lap-time notices.",
+  "seasons": {
+    "2025": {"events": 25, "documents": 1366, "summons": 156, "decision": 102, "infringement": 238, "corrected": 13},
+    "2026": {"events": 17, "documents": 1263, "summons": 147, "decision": 89, "infringement": 320, "corrected": 4}
+  },
+  "notes": [
+    "The 2026 Bahrain Grand Prix documents are filed as '2026 Bahrain Grand Prix in Malaysia'.",
+    "Max Verstappen is Car 1 in 2025 documents and Car 3 in 2026 documents, so the points clock is keyed on the driver's name, not the number.",
+    "Some PDFs sit at addresses ending in _0.pdf (for example 2026 Hungarian Grand Prix, Doc 19), the sign of a file uploaded again under the same name."
+  ]
+}
