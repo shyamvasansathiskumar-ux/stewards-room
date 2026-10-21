@@ -1,0 +1,526 @@
+{
+ "generated": "2026-10-21",
+ "index": {
+  "about": "Counts from the FIA's decision-document pages for the 2025 and 2026 Formula 1 seasons, listed on 21 Oct 2026 (2026 up to the Singapore Grand Prix, 11 Oct). Counted by the first word of each title, so 'infringement' also includes deleted-lap-time notices.",
+  "seasons": {
+   "2025": {
+    "events": 25,
+    "documents": 1366,
+    "summons": 156,
+    "decision": 102,
+    "infringement": 238,
+    "corrected": 13
+   },
+   "2026": {
+    "events": 17,
+    "documents": 1263,
+    "summons": 147,
+    "decision": 89,
+    "infringement": 320,
+    "corrected": 4
+   }
+  },
+  "notes": [
+   "The 2026 Bahrain Grand Prix documents are filed as '2026 Bahrain Grand Prix in Malaysia'.",
+   "Max Verstappen is Car 1 in 2025 documents and Car 3 in 2026 documents, so the points clock is keyed on the driver's name, not the number.",
+   "Some PDFs sit at addresses ending in _0.pdf (for example 2026 Hungarian Grand Prix, Doc 19), the sign of a file uploaded again under the same name."
+  ]
+ },
+ "decisions": [
+  {
+   "url": "https://www.fia.com/system/files/decision-document/2026_singapore_grand_prix_-_infringement_-_car_77_-_causing_a_collision_with_car_23.pdf",
+   "event": "2026 Singapore Grand Prix",
+   "season": 2026,
+   "date": "2026-10-10",
+   "car": 77,
+   "driver": "Valtteri Bottas",
+   "session": "Sprint",
+   "article": "L-IV-2d",
+   "family": "collision",
+   "fact": "Car 77 collided with Car 23 in Turn 16",
+   "decision": "No Penalty is applied",
+   "reason": "When preparing for the re-start at the end of a Safety Car period, Car 23 collided with the rear of Car 5, and Car 77 collided with the rear of Car 23.",
+   "outcome": "no penalty",
+   "points": 0,
+   "stated_total": null,
+   "gold": true,
+   "problems": []
+  },
+  {
+   "url": "https://www.fia.com/system/files/decision-document/2026_singapore_grand_prix_-_infringement_-_car_23_-_causing_a_collision_with_car_5.pdf",
+   "event": "2026 Singapore Grand Prix",
+   "season": 2026,
+   "date": "2026-10-10",
+   "car": 23,
+   "driver": "Alexander Albon",
+   "session": "Sprint",
+   "article": "L-IV-2d",
+   "family": "collision",
+   "fact": "Car 23 collided with Car 5 in Turn 16",
+   "decision": "No Penalty is applied",
+   "reason": "When preparing for the re-start at the end of a Safety Car period, Car 23 collided with the rear of Car 5.",
+   "outcome": "no penalty",
+   "points": 0,
+   "stated_total": null,
+   "gold": true,
+   "problems": []
+  },
+  {
+   "url": "https://www.fia.com/system/files/decision-document/2026_bahrain_grand_prix_in_malaysia_-_infringement_-_car_5_-_causing_a_collision_with_car_55.pdf",
+   "event": "2026 Bahrain Grand Prix in Malaysia",
+   "season": 2026,
+   "date": "2026-10-04",
+   "car": 5,
+   "driver": "Gabriel Bortoleto",
+   "session": "Race",
+   "article": "L-IV-2d",
+   "family": "collision",
+   "fact": "Car 5 caused a collision with Car 55 in Turn 2.",
+   "decision": "10 second time penalty.",
+   "reason": "BOR did not have his front axle alongside SAI's mirror prior to the apex.",
+   "outcome": "10s",
+   "points": 0,
+   "stated_total": null,
+   "gold": true,
+   "problems": []
+  },
+  {
+   "url": "https://www.fia.com/system/files/decision-document/2026_azerbaijan_grand_prix_-_infringement_-_car_43_-_collision_with_car_10_in_turn_1.pdf",
+   "event": "2026 Azerbaijan Grand Prix",
+   "season": 2026,
+   "date": "2026-09-26",
+   "car": 43,
+   "driver": "Franco Colapinto",
+   "session": "Race",
+   "article": "L-IV-2d",
+   "family": "collision",
+   "fact": "Collision with Car 10 in Turn 1",
+   "decision": "10 second time penalty converted to a drop of 5 grid positions at the next race in which the driver participates.",
+   "reason": "COL braked too late and entered the corner on the inside at a speed which did not allow him to make the corner in a controlled manner.",
+   "outcome": "5 grid (converted)",
+   "points": 0,
+   "stated_total": null,
+   "gold": true,
+   "problems": []
+  },
+  {
+   "url": "https://www.fia.com/system/files/decision-document/2026_spanish_grand_prix_-_infringement_-_car_55_-_causing_a_collision_with_car_14.pdf",
+   "event": "2026 Spanish Grand Prix",
+   "season": 2026,
+   "date": "2026-09-13",
+   "car": 55,
+   "driver": "Carlos Sainz",
+   "session": "Race",
+   "article": "L-IV-2e",
+   "family": "collision",
+   "fact": "Car 55 moved under braking and made contact with Car 14 in Turn 5.",
+   "decision": "5 second time penalty.",
+   "reason": "The Stewards determine that Car 55 moved under braking and should have left more space",
+   "outcome": "5s",
+   "points": 0,
+   "stated_total": null,
+   "gold": true,
+   "problems": []
+  },
+  {
+   "url": "https://www.fia.com/system/files/decision-document/2026_hungarian_grand_prix_-_infringement_-_car_55_-_erratic_driving_in_turn_12_0.pdf",
+   "event": "2026 Hungarian Grand Prix",
+   "season": 2026,
+   "date": "2026-07-24",
+   "car": 55,
+   "driver": "Carlos Sainz",
+   "session": "Free Practice 1",
+   "article": "L-IV-2b",
+   "family": "impeding",
+   "fact": "The driver of Car 55 was preparing his brakes when on the racing line between turns 11 and 12 and hindered Car 3 which was on a push lap.",
+   "decision": "Driver: Warning.",
+   "reason": "The driver of Car 3 said he was surprised to find Car 55 travelling so slowly on the line but he did not consider the incident to be dangerous.",
+   "outcome": "warning",
+   "points": 0,
+   "stated_total": null,
+   "gold": true,
+   "problems": []
+  },
+  {
+   "url": "https://www.fia.com/system/files/decision-document/2026_hungarian_grand_prix_-_decision_-_car_3_-_alleged_erratic_driving_in_turn_12.pdf",
+   "event": "2026 Hungarian Grand Prix",
+   "season": 2026,
+   "date": "2026-07-24",
+   "car": 3,
+   "driver": "Max Verstappen",
+   "session": "Free Practice 1",
+   "article": "L-IV-2e",
+   "family": "other",
+   "fact": "The driver of Car 3 slowed significantly in turn 12",
+   "decision": "No further action.",
+   "reason": "The Driver of Car 3 then slowed significantly at turn 12 and gesticulated to the driver of Car 55 to mark his frustration",
+   "outcome": "no penalty",
+   "points": 0,
+   "stated_total": null,
+   "gold": true,
+   "problems": []
+  },
+  {
+   "url": "https://www.fia.com/system/files/decision-document/2026_belgian_grand_prix_-_infringement_-_car_44_-_causing_a_collision_with_car_63_in_turn_5.pdf",
+   "event": "2026 Belgian Grand Prix",
+   "season": 2026,
+   "date": "2026-07-19",
+   "car": 44,
+   "driver": "Lewis Hamilton",
+   "session": "Race",
+   "article": "L-IV-2d",
+   "family": "collision",
+   "fact": "Causing a collision with Car 63 in turn 5",
+   "decision": "5 second time penalty.",
+   "reason": "the Stewards consider that a 5-second Time Penalty, rather than the standard 10-second Time Penalty, is the appropriate penalty in accordance with the FIA Penalty Guidelines.",
+   "outcome": "5s",
+   "points": 0,
+   "stated_total": null,
+   "gold": true,
+   "problems": []
+  },
+  {
+   "url": "https://www.fia.com/system/files/decision-document/2026_british_grand_prix_-_infringement_-_car_23_-_causing_a_collision_with_car_87.pdf",
+   "event": "2026 British Grand Prix",
+   "season": 2026,
+   "date": "2026-07-05",
+   "car": 23,
+   "driver": "Alexander Albon",
+   "session": "Race",
+   "article": "L-IV-2d",
+   "family": "collision",
+   "fact": "Car 23 caused a collision with Car 87 at Turn 6.",
+   "decision": "10 second time penalty.",
+   "reason": "therefore did not satisfy the requirements of the Driving Standards Guidelines for an inside overtake.",
+   "outcome": "10s",
+   "points": 0,
+   "stated_total": null,
+   "gold": true,
+   "problems": []
+  },
+  {
+   "url": "https://www.fia.com/system/files/decision-document/2025_italian_grand_prix_-_infringement_-_car_87_-_causing_a_collision.pdf",
+   "event": "2025 Italian Grand Prix",
+   "season": 2025,
+   "date": "2025-09-07",
+   "car": 87,
+   "driver": "Oliver Bearman",
+   "session": "Race",
+   "article": "L-IV-2d",
+   "family": "collision",
+   "fact": "Car 87 collided with Car 55 at Turn 4",
+   "decision": "10 second time penalty. 2 penalty points (total of 10 for the 12 month period).",
+   "reason": "The Stewards reviewed video and in-car video evidence.",
+   "outcome": "10s + 2pts",
+   "points": 2,
+   "stated_total": 10,
+   "gold": true,
+   "problems": []
+  },
+  {
+   "url": "https://www.fia.com/system/files/decision-document/2025_dutch_grand_prix_-_infringement_-_car_12_-_causing_a_collision_with_car_16.pdf",
+   "event": "2025 Dutch Grand Prix",
+   "season": 2025,
+   "date": "2025-08-31",
+   "car": 12,
+   "driver": "Kimi Antonelli",
+   "session": "Race",
+   "article": "L-IV-2d",
+   "family": "collision",
+   "fact": "Causing a collision with car 16 at turn 3",
+   "decision": "10 second time penalty. 2 penalty points (total of 4 for the 12 month period).",
+   "reason": "It is clear that Car 12 was wholly and predominantly to blame for the collision.",
+   "outcome": "10s + 2pts",
+   "points": 2,
+   "stated_total": 4,
+   "gold": true,
+   "problems": []
+  },
+  {
+   "url": "https://www.fia.com/system/files/decision-document/2025_hungarian_grand_prix_-_decision_-_car_1_-_alleged_forcing_another_driver_off_of_the_track.pdf",
+   "event": "2025 Hungarian Grand Prix",
+   "season": 2025,
+   "date": "2025-08-03",
+   "car": 1,
+   "driver": "Max Verstappen",
+   "session": "Race",
+   "article": "L-IV-2b",
+   "family": "other",
+   "fact": null,
+   "decision": "No further action.",
+   "reason": "The Stewards heard from the driver of Car 1 (Max Verstappen), team representatives and video and in-car video evidence.",
+   "outcome": "no penalty",
+   "points": 0,
+   "stated_total": null,
+   "gold": true,
+   "problems": []
+  },
+  {
+   "url": "https://www.fia.com/system/files/decision-document/2025_austrian_grand_prix_-_infringement_-_car_12_-_causing_a_collision_with_car_1.pdf",
+   "event": "2025 Austrian Grand Prix",
+   "season": 2025,
+   "date": "2025-06-29",
+   "car": 12,
+   "driver": "Kimi Antonelli",
+   "session": "Race",
+   "article": "L-IV-2d",
+   "family": "collision",
+   "fact": "Car 12 caused a collision with Car 1 in Turn 3",
+   "decision": "Drop of 3 grid positions for the next Race in which the driver participates. 2 penalty points (total of 2 for the 12 month period).",
+   "reason": "The Stewards heard from the driver of Car 12 (Kimi Antonelli), the team representative and reviewed video evidence.",
+   "outcome": "3 grid + 2pts",
+   "points": 2,
+   "stated_total": 2,
+   "gold": true,
+   "problems": []
+  },
+  {
+   "url": "https://www.fia.com/system/files/decision-document/2025_spanish_grand_prix_-_infringement_-_car_1_-_causing_a_collision_with_car_63_at_t5.pdf",
+   "event": "2025 Spanish Grand Prix",
+   "season": 2025,
+   "date": "2025-06-01",
+   "car": 1,
+   "driver": "Max Verstappen",
+   "session": "Race",
+   "article": "L-IV-2d",
+   "family": "collision",
+   "fact": "Car 1 collided with Car 63 at turn 5.",
+   "decision": "10 second time penalty. 3 penalty points (total of 11 for the 12 month period).",
+   "reason": "The Stewards reviewed positioning/marshalling system data, video, timing, telemetry, and in-car video evidence.",
+   "outcome": "10s + 3pts",
+   "points": 3,
+   "stated_total": 11,
+   "gold": true,
+   "problems": []
+  }
+ ],
+ "spread": [
+  {
+   "article": "L-IV-2b",
+   "season": 2025,
+   "n": 1,
+   "small": true,
+   "outcomes": {
+    "no penalty": 1
+   },
+   "usual": "no penalty",
+   "departures": [],
+   "severity_range": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "article": "L-IV-2b",
+   "season": 2026,
+   "n": 1,
+   "small": true,
+   "outcomes": {
+    "warning": 1
+   },
+   "usual": "warning",
+   "departures": [],
+   "severity_range": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "article": "L-IV-2d",
+   "season": 2025,
+   "n": 4,
+   "small": true,
+   "outcomes": {
+    "10s + 2pts": 2,
+    "10s + 3pts": 1,
+    "3 grid + 2pts": 1
+   },
+   "usual": "10s + 2pts",
+   "departures": [
+    {
+     "url": "https://www.fia.com/system/files/decision-document/2025_spanish_grand_prix_-_infringement_-_car_1_-_causing_a_collision_with_car_63_at_t5.pdf",
+     "event": "2025 Spanish Grand Prix",
+     "driver": "Max Verstappen",
+     "outcome": "10s + 3pts",
+     "usual": "10s + 2pts",
+     "explained": null,
+     "because": null
+    },
+    {
+     "url": "https://www.fia.com/system/files/decision-document/2025_austrian_grand_prix_-_infringement_-_car_12_-_causing_a_collision_with_car_1.pdf",
+     "event": "2025 Austrian Grand Prix",
+     "driver": "Kimi Antonelli",
+     "outcome": "3 grid + 2pts",
+     "usual": "10s + 2pts",
+     "explained": null,
+     "because": null
+    }
+   ],
+   "severity_range": [
+    4.5,
+    10.0
+   ]
+  },
+  {
+   "article": "L-IV-2d",
+   "season": 2026,
+   "n": 6,
+   "small": true,
+   "outcomes": {
+    "no penalty": 2,
+    "10s": 2,
+    "5s": 1,
+    "5 grid (converted)": 1
+   },
+   "usual": "10s",
+   "departures": [
+    {
+     "url": "https://www.fia.com/system/files/decision-document/2026_singapore_grand_prix_-_infringement_-_car_77_-_causing_a_collision_with_car_23.pdf",
+     "event": "2026 Singapore Grand Prix",
+     "driver": "Valtteri Bottas",
+     "outcome": "no penalty",
+     "usual": "10s",
+     "explained": null,
+     "because": null
+    },
+    {
+     "url": "https://www.fia.com/system/files/decision-document/2026_singapore_grand_prix_-_infringement_-_car_23_-_causing_a_collision_with_car_5.pdf",
+     "event": "2026 Singapore Grand Prix",
+     "driver": "Alexander Albon",
+     "outcome": "no penalty",
+     "usual": "10s",
+     "explained": null,
+     "because": null
+    },
+    {
+     "url": "https://www.fia.com/system/files/decision-document/2026_belgian_grand_prix_-_infringement_-_car_44_-_causing_a_collision_with_car_63_in_turn_5.pdf",
+     "event": "2026 Belgian Grand Prix",
+     "driver": "Lewis Hamilton",
+     "outcome": "5s",
+     "usual": "10s",
+     "explained": true,
+     "because": "the Stewards consider that a 5-second Time Penalty, rather than the standard 10-second Time Penalty, is the appropriate penalty in accordance with the FIA Penalty Guidelines."
+    }
+   ],
+   "severity_range": [
+    0.0,
+    10.0
+   ]
+  },
+  {
+   "article": "L-IV-2e",
+   "season": 2026,
+   "n": 2,
+   "small": true,
+   "outcomes": {
+    "no penalty": 1,
+    "5s": 1
+   },
+   "usual": "5s",
+   "departures": [],
+   "severity_range": [
+    0.0,
+    5.0
+   ]
+  }
+ ],
+ "points_rate": {
+  "2025": {
+   "with_points": 4,
+   "penalised": 4,
+   "small": true
+  },
+  "2026": {
+   "with_points": 0,
+   "penalised": 4,
+   "small": true
+  }
+ },
+ "clock": [
+  {
+   "driver": "Kimi Antonelli",
+   "active_today": 0,
+   "awards": [
+    {
+     "on": "2025-06-29",
+     "points": 2,
+     "expires": "2026-06-29",
+     "stated_total": 2,
+     "source": "https://www.fia.com/system/files/decision-document/2025_austrian_grand_prix_-_infringement_-_car_12_-_causing_a_collision_with_car_1.pdf"
+    },
+    {
+     "on": "2025-08-31",
+     "points": 2,
+     "expires": "2026-08-31",
+     "stated_total": 4,
+     "source": "https://www.fia.com/system/files/decision-document/2025_dutch_grand_prix_-_infringement_-_car_12_-_causing_a_collision_with_car_16.pdf"
+    }
+   ]
+  },
+  {
+   "driver": "Max Verstappen",
+   "active_today": 0,
+   "awards": [
+    {
+     "on": "2025-06-01",
+     "points": 3,
+     "expires": "2026-06-01",
+     "stated_total": 11,
+     "source": "https://www.fia.com/system/files/decision-document/2025_spanish_grand_prix_-_infringement_-_car_1_-_causing_a_collision_with_car_63_at_t5.pdf"
+    }
+   ]
+  },
+  {
+   "driver": "Oliver Bearman",
+   "active_today": 0,
+   "awards": [
+    {
+     "on": "2025-09-07",
+     "points": 2,
+     "expires": "2026-09-07",
+     "stated_total": 10,
+     "source": "https://www.fia.com/system/files/decision-document/2025_italian_grand_prix_-_infringement_-_car_87_-_causing_a_collision.pdf"
+    }
+   ]
+  }
+ ],
+ "disagreements": [
+  {
+   "driver": "Max Verstappen",
+   "on": "2025-06-01",
+   "source": "https://www.fia.com/system/files/decision-document/2025_spanish_grand_prix_-_infringement_-_car_1_-_causing_a_collision_with_car_63_at_t5.pdf",
+   "fia_says": 11,
+   "ledger_says": 3,
+   "missing_points": 8
+  },
+  {
+   "driver": "Oliver Bearman",
+   "on": "2025-09-07",
+   "source": "https://www.fia.com/system/files/decision-document/2025_italian_grand_prix_-_infringement_-_car_87_-_causing_a_collision.pdf",
+   "fia_says": 10,
+   "ledger_says": 2,
+   "missing_points": 8
+  }
+ ],
+ "agreements": [
+  {
+   "driver": "Kimi Antonelli",
+   "on": "2025-06-29",
+   "fia_says": 2,
+   "source": "https://www.fia.com/system/files/decision-document/2025_austrian_grand_prix_-_infringement_-_car_12_-_causing_a_collision_with_car_1.pdf"
+  },
+  {
+   "driver": "Kimi Antonelli",
+   "on": "2025-08-31",
+   "fia_says": 4,
+   "source": "https://www.fia.com/system/files/decision-document/2025_dutch_grand_prix_-_infringement_-_car_12_-_causing_a_collision_with_car_16.pdf"
+  }
+ ],
+ "register": null,
+ "parser_score": {
+  "checks": 70,
+  "passed": 70,
+  "documents": 14,
+  "failures": []
+ }
+}

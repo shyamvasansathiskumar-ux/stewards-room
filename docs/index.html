@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Stewards' Room</title>
+<meta name="description" content="Same offence, same penalty? An open register of Formula 1 stewards' decisions, with every field quoted from the FIA's own documents.">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <div class="wrap bar-in">
+    <span class="mark" aria-hidden="true"></span>
+    <span class="brand">Stewards' Room</span>
+    <nav aria-label="Sections">
+      <a href="#change">2026 change</a>
+      <a href="#collisions">Collisions</a>
+      <a href="#arithmetic">Points maths</a>
+      <a href="#register">Register</a>
+      <a href="#method">Method</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <div class="hero-text">
+      <p class="eyebrow">An open register of Formula 1 stewarding · 2025–2026</p>
+      <h1>Same offence,<br>same penalty?</h1>
+      <p class="lede">Every stewards' decision is published as a PDF with the same fields: the fact, the rule, the decision, the reason. Stewards' Room reads them, keeps each field's exact wording and where it sat in the document, runs each driver's penalty-points clock, and lines up like with like. It never says a decision was wrong. It shows you the decisions side by side.</p>
+    </div>
+
+    <figure class="clock" aria-labelledby="clock-cap">
+      <div class="clock-head">
+        <span class="mono">2025 SPANISH GRAND PRIX · DOC 40</span>
+        <span class="mono">01 JUN 2025 · 18:03</span>
+      </div>
+      <p class="clock-who">Max Verstappen <span class="mono dim">Car 1 · Oracle Red Bull Racing</span></p>
+      <div class="meter" id="meter" role="img" aria-label="11 of 12 penalty points"></div>
+      <div class="meter-scale mono"><span>0</span><span>12 = one-race ban</span></div>
+      <dl class="clock-facts">
+        <div><dt>Fact</dt><dd>“Car 1 collided with Car 63 at turn 5.”</dd></div>
+        <div><dt>Decision</dt><dd>“10 second time penalty. 3 penalty points (total of 11 for the 12 month period).”</dd></div>
+        <div><dt>Expired</dt><dd class="mono">01 Jun 2026 · twelve months after the offence</dd></div>
+      </dl>
+      <figcaption id="clock-cap">One point from a ban. Each point counts for twelve months; these ran out on 1 June 2026. In 2026 he races as <strong>Car 3</strong>, which is why the clock follows the driver, not the number.</figcaption>
+    </figure>
+  </section>
+
+  <section class="facts wrap" aria-label="Key numbers" id="facts"></section>
+
+  <section id="change" class="wrap block">
+    <h2>The 2026 change, measured</h2>
+    <p class="prose">For 2026 the FIA's driving guidelines kept penalty points for collisions caused by dangerous, reckless or apparently deliberate driving, and for unsportsmanlike behaviour (as reported by <a href="https://www.planetf1.com/news/fia-driving-standards-guidelines-f1-2026-penalty-points">PlanetF1</a>, 6 Mar 2026). So: when stewards penalised a collision under Article 2 d), how often did points come with it?</p>
+    <div class="rate" id="rate"></div>
+  </section>
+
+  <section id="collisions" class="wrap block">
+    <h2>Collisions: Appendix L, Chapter IV, Article 2 d)</h2>
+    <p class="prose">For each season, the outcomes given under the same article, and every decision that differs from the usual one. Where the Reason explains the difference, the explanation is quoted.</p>
+    <div id="spread"></div>
+  </section>
+
+  <section id="arithmetic" class="wrap block">
+    <h2>Checking the FIA's arithmetic</h2>
+    <p class="prose">Each decision that gives points prints the driver's new total. The register rebuilds that total from the decisions it holds. A match confirms the history. A gap has three possible causes the register can't tell apart: it is missing earlier decisions (the usual one), a decision was changed later, or the printed figure is wrong. Gaps are shown, never patched.</p>
+    <div class="ledger" id="ledger"></div>
+  </section>
+
+  <section id="register" class="wrap block">
+    <h2>The register</h2>
+    <p class="prose">Decisions, newest first. Rows marked <span class="tag">checked</span> were compared by hand with the PDF; the link opens the original.</p>
+    <div class="filter" role="group" aria-label="Season">
+      <button type="button" data-season="all" aria-pressed="true">All</button>
+      <button type="button" data-season="2026" aria-pressed="false">2026</button>
+      <button type="button" data-season="2025" aria-pressed="false">2025</button>
+    </div>
+    <div class="table-wrap"><table class="reg">
+      <thead><tr><th>Date</th><th>Event</th><th>Driver</th><th>Session</th><th>Fact, as printed</th><th>Article</th><th>Outcome</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table></div>
+  </section>
+
+  <section id="index" class="wrap block">
+    <h2>What the FIA published</h2>
+    <p class="prose">Counts from the FIA's decision-document pages, listed on 21 October 2026. A <em>summons</em> calls a driver to a hearing; a <em>decision</em> or <em>infringement</em> records the outcome.</p>
+    <div class="idx" id="idx"></div>
+    <ul class="notes" id="notes"></ul>
+  </section>
+
+  <section id="method" class="wrap block method">
+    <h2>Method and limits</h2>
+    <div class="cols">
+      <div>
+        <h3>How it reads a decision</h3>
+        <p>The FIA prints every decision as the same labelled table. The parser takes a label only at the table's left edge and in the table's order, and records the exact characters each field came from; the text of every fetched PDF is kept so those spans can be checked. A field that isn't printed stays empty (2025 Hungary, Doc 42 has no Fact). Wording the parser hasn't seen is flagged, never guessed. On the hand-checked set it gets <strong id="score">–</strong> right: car, article, points, printed total and penalty. That set is laid out the way the FIA prints it; the score on real PDF layouts comes with the full fetch.</p>
+        <h3>How it watches the FIA's record</h3>
+        <p>Each fetched PDF is hashed into an append-only chain. When the FIA republishes a document, or on a full re-check, a changed file is recorded with both hashes. An edited register line is found by verification; lines cut off the end are found by comparing the chain's head with the copy published in this site's data.</p>
+      </div>
+      <div>
+        <h3>What it can't tell you</h3>
+        <ul>
+          <li><strong>Whether a decision was right.</strong> Two incidents under one article can differ in ways no table captures. The register shows decisions side by side; judging them is yours.</li>
+          <li><strong>Much, yet.</strong> The hand-checked set is 14 decisions, picked by hand (mostly collisions), not drawn at random. Groups under eight are marked “small sample”, and they all are.</li>
+          <li><strong>The full reasoning.</strong> The register keeps short excerpts. When only an excerpt is held, a difference is marked “can't tell” rather than “unexplained”.</li>
+          <li><strong>Severity in one number.</strong> Time, grid places and points aren't the same currency. Outcomes are shown as printed.</li>
+        </ul>
+        <p class="small">Data: FIA decision documents (fia.com). Not affiliated with or endorsed by the FIA, Formula 1 or any team. Formula 1 and F1 are trademarks of Formula One Licensing B.V. Non-commercial.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot wrap">
+  <span>Shyam Kumar · CSE, Rajalakshmi Engineering College · <a href="https://github.com/shyamvasansathiskumar-ux/stewards-room">source</a></span>
+  <span class="mono" id="gen"></span>
+</footer>
+<script src="app.js" type="module"></script>
+</body>
+</html>
