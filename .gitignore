@@ -1,0 +1,8 @@
+data/pdf/
+data/register.jsonl
+data/index-*.jsonl
+data/decisions-*.jsonl
+__pycache__/
+*.pyc
+data/text/
+*.partial
