@@ -154,7 +154,7 @@ a.src { font: 500 12px var(--mono); letter-spacing: .08em; color: var(--acc); te
 .g-top .label { color: var(--mute); font-variant-numeric: tabular-nums; }
 .g-prog { display: grid; grid-auto-flow: column; gap: 4px; }
 .g-prog i { height: 6px; border-radius: 3px; background: var(--line); }
-.g-prog i.now { background: var(--ink-2); }
+.g-prog i.cur { background: var(--ink-2); }
 .g-prog i.hit { background: var(--ok); }
 .g-prog i.miss { background: var(--pts); }
 .g-case { padding: 26px 24px 8px; display: grid; gap: 12px; }

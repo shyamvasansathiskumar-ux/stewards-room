@@ -116,7 +116,7 @@
       const done = answers.filter(Boolean);
       const hit = done.filter((a) => a.hit).length;
       $("gScore").textContent = `${hit} of ${done.length} matched`;
-      [...prog.children].forEach((b, j) => { b.className = answers[j] ? (answers[j].hit ? "hit" : "miss") : j === i ? "now" : ""; });
+      [...prog.children].forEach((b, j) => { b.className = answers[j] ? (answers[j].hit ? "hit" : "miss") : j === i ? "cur" : ""; });
     }
 
     function reveal(d, a) {
