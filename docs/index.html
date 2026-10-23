@@ -38,6 +38,7 @@
       <li><a href="#clock">Ban clock</a></li>
       <li><a href="#change">2026</a></li>
       <li><a href="#collisions">Collisions</a></li>
+      <li><a href="#call">Your call</a></li>
       <li><a href="#register">Register</a></li>
     </ul>
     <a class="btn sm ghost" href="https://github.com/shyamvasansathiskumar-ux/stewards-room" target="_blank" rel="noopener">Source <span class="arr">↗</span></a>
@@ -62,7 +63,7 @@
       </div>
       <div class="hero-cta" data-intro>
         <a class="btn acc" href="#register">Open the register <span class="arr">→</span></a>
-        <a class="btn ghost" href="#clock">The ban clock</a>
+        <a class="btn ghost" href="#call">Make the call</a>
       </div>
     </div>
     <div class="wrap hero-meta" data-intro>
@@ -86,6 +87,29 @@
             <div><dt>Decision</dt><dd>“10 second time penalty. 3 penalty points (total of 11 for the 12 month period).”</dd></div>
           </dl>
           <div class="doc-foot"><span class="pill ask">Expired 01 Jun 2026</span><span class="fine">In 2026 he races as <b>Car 3</b>. The clock follows the driver, not the number.</span></div>
+        </div>
+        <div class="sim card" id="sim" data-rise>
+          <div class="sim-head">
+            <span class="label bare">Run the clock yourself</span>
+            <div class="sim-drivers" id="simDrivers" role="group" aria-label="Driver"></div>
+          </div>
+          <div class="sim-meter">
+            <div class="meter big" id="simMeter" role="img" aria-label="Penalty points"></div>
+            <div class="sim-num"><b id="simPts">0</b><span>of 12 on <span id="simDate">–</span></span></div>
+          </div>
+          <label class="sim-slide"><span class="sr">Date</span><input type="range" id="simSlider" min="0" max="100" value="0"></label>
+          <div class="sim-axis mono small"><span id="axA">–</span><span id="axB">–</span></div>
+          <ul class="sim-key small">
+            <li><i class="k on"></i>In the register, still live</li>
+            <li><i class="k ghost"></i>Printed by the FIA; the decisions behind them aren't in the register yet</li>
+            <li><i class="k what"></i>Your what-if</li>
+          </ul>
+          <p class="sim-note" id="simNote" aria-live="polite"></p>
+          <div class="sim-what">
+            <span class="label bare">What if the stewards gave, that day</span>
+            <div class="stepper"><button type="button" id="whatMinus" aria-label="Fewer points">−</button><b id="whatN">0</b><button type="button" id="whatPlus" aria-label="More points">+</button></div>
+            <span class="sim-out" id="whatOut" aria-live="polite"></span>
+          </div>
         </div>
       </div>
     </div>
@@ -117,11 +141,37 @@
     </div>
   </section>
 
-  <!-- 04 · arithmetic -->
+  <!-- 04 · you make the call -->
+  <section id="call" data-stage="3" data-chapter="Your call">
+    <div class="wrap">
+      <div class="shares-head">
+        <p class="label" data-scramble>04 · You make the call</p>
+        <h2 class="h1" data-split>Read the Fact. <em>Give the penalty.</em></h2>
+        <p class="body" data-rise>Thirteen real incidents, worded exactly as the stewards printed them. Pick a penalty, then see what they decided and why. There's no right answer here, only theirs and yours.</p>
+      </div>
+      <div class="game card" id="game" data-rise>
+        <div class="g-top">
+          <span class="label bare" id="gPos">1 / 13</span>
+          <div class="g-prog" aria-hidden="true" id="gProg"></div>
+          <span class="label bare" id="gScore">0 matched</span>
+        </div>
+        <div class="g-case" id="gCase"></div>
+        <div class="g-pick" id="gPick" role="group" aria-label="Your penalty"></div>
+        <label class="g-pts"><input type="checkbox" id="gPts"> <span>…and penalty points</span></label>
+        <div class="g-reveal" id="gReveal" aria-live="polite" hidden></div>
+        <div class="g-nav">
+          <button type="button" class="btn ghost sm" id="gPrev">← Back</button>
+          <button type="button" class="btn acc sm" id="gGo">Decide</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 · arithmetic -->
   <section id="arithmetic" data-stage="4" data-chapter="Points maths">
     <div class="wrap grid">
       <div class="col-l stack">
-        <p class="label" data-scramble>04 · Checking the arithmetic</p>
+        <p class="label" data-scramble>05 · Checking the arithmetic</p>
         <h2 class="h2" data-split>The FIA prints a total. <em>We add it up.</em></h2>
       </div>
       <div class="col-r stack">
@@ -135,19 +185,24 @@
   <section id="register" class="ink-band" data-stage="5" data-chapter="Register">
     <div class="wrap">
       <div class="vault-head">
-        <p class="label" data-scramble>05 · The register</p>
+        <p class="label" data-scramble>06 · The register</p>
         <h2 class="h1" data-split>Quoted, <em>not retold.</em></h2>
       </div>
-      <div class="filter" role="group" aria-label="Season">
-        <button type="button" class="chip on" data-season="all" aria-pressed="true">All</button>
-        <button type="button" class="chip" data-season="2026" aria-pressed="false">2026</button>
-        <button type="button" class="chip" data-season="2025" aria-pressed="false">2025</button>
+      <div class="reg-tools">
+        <div class="filter" role="group" aria-label="Season">
+          <button type="button" class="chip on" data-season="all" aria-pressed="true">All</button>
+          <button type="button" class="chip" data-season="2026" aria-pressed="false">2026</button>
+          <button type="button" class="chip" data-season="2025" aria-pressed="false">2025</button>
+        </div>
+        <div class="filter" role="group" aria-label="Kind" id="kinds"></div>
+        <label class="search"><span class="sr">Search the register</span><input type="search" id="q" placeholder="Search driver, event, wording…" autocomplete="off"></label>
       </div>
+      <p class="fine on-ink reg-count" id="regCount" aria-live="polite"></p>
       <div class="reg-wrap"><table class="reg">
-        <thead><tr><th>Date</th><th>Event</th><th>Driver</th><th>Session</th><th>Fact, as printed</th><th>Outcome</th></tr></thead>
+        <thead><tr><th>Date</th><th>Event</th><th>Driver</th><th>Session</th><th>Fact, as printed</th><th>Outcome</th><th><span class="sr">Open</span></th></tr></thead>
         <tbody id="rows"></tbody>
       </table></div>
-      <p class="fine on-ink">Rows marked <span class="tag">checked</span> were compared by hand with the PDF. Each row links to the original.</p>
+      <p class="fine on-ink">Rows marked <span class="tag">checked</span> were compared by hand with the PDF. Open a row to read every field as printed; each links to the original.</p>
     </div>
   </section>
 
@@ -155,7 +210,7 @@
   <section id="index" data-stage="6" data-chapter="The archive">
     <div class="wrap grid">
       <div class="col-l stack">
-        <p class="label" data-scramble>06 · What the FIA published</p>
+        <p class="label" data-scramble>07 · What the FIA published</p>
         <div class="tally"><b id="docCount">2629</b><span>documents, 2025 and 2026</span></div>
       </div>
       <div class="col-r stack">
@@ -169,7 +224,7 @@
   <section id="method" data-stage="7" data-chapter="Method">
     <div class="wrap grid">
       <div class="col-l stack">
-        <p class="label" data-scramble>07 · Method and limits</p>
+        <p class="label" data-scramble>08 · Method and limits</p>
         <h2 class="h2" data-split>How it reads, <em>where it stops.</em></h2>
       </div>
       <div class="col-r">
@@ -187,7 +242,7 @@
   <section id="run" data-stage="8" data-chapter="Run it">
     <div class="wrap grid">
       <div class="col-l stack">
-        <p class="label" data-scramble>08 · Run it</p>
+        <p class="label" data-scramble>09 · Run it</p>
         <h2 class="h2" data-split>Standard library. <em>Polite to the FIA.</em></h2>
         <p class="body" data-rise>One request every 1.5 seconds, only to fia.com, cached by address. Needs Python 3.10 and pdftotext.</p>
       </div>
@@ -224,6 +279,7 @@ Ran 44 tests in 0.1s
 <script src="lenis.min.js"></script>
 <script src="motion.js"></script>
 <script src="app.js"></script>
+<script src="interact.js"></script>
 <script type="module" src="scene.js"></script>
 </body>
 </html>

@@ -64,25 +64,6 @@
     $("ledger").replaceChildren(...rows);
   }
 
-  let ALL = [];
-  function table(season) {
-    const list = ALL.filter((d) => season === "all" || String(d.season) === season);
-    $("rows").replaceChildren(...list.map((d) => el("tr", {},
-      el("td", { class: "d" }, day(d.date), d.gold ? el("br") : null, d.gold ? el("span", { class: "tag", text: "checked" }) : null),
-      el("td", { text: d.event.replace(/^\d{4} /, "") }),
-      el("td", { class: "drv" }, el("b", { text: d.driver || "–" }), el("span", { text: d.car != null ? `Car ${d.car}` : "" })),
-      el("td", { text: d.session || "–" }),
-      el("td", { class: "fact" }, d.fact ? `“${d.fact}” ` : el("span", { class: "none", text: "No Fact printed " }), el("a", { href: safeUrl(d.url), target: "_blank", rel: "noopener noreferrer", text: "PDF ↗" })),
-      el("td", { class: "out" }, el("span", { class: d.points ? "pts" : "", text: d.outcome })))));
-  }
-  function filter() {
-    const btns = [...document.querySelectorAll(".filter .chip")];
-    btns.forEach((b) => b.addEventListener("click", () => {
-      btns.forEach((o) => { const on = o === b; o.classList.toggle("on", on); o.setAttribute("aria-pressed", String(on)); });
-      table(b.dataset.season);
-    }));
-  }
-
   function index(r) {
     const s = r.index.seasons, total = Object.values(s).reduce((n, v) => n + v.documents, 0);
     $("docCount").textContent = String(total);
@@ -100,6 +81,6 @@
 
   fetch("report.json", { cache: "no-cache" })
     .then((res) => { if (!res.ok) throw new Error(res.status); return res.json(); })
-    .then((r) => { rate(r); spread(r); ledger(r); index(r); ALL = r.decisions; table("all"); filter(); if (window.ScrollTrigger) ScrollTrigger.refresh(); })
+    .then((r) => { rate(r); spread(r); ledger(r); index(r); window.SR_DATA = r; document.dispatchEvent(new CustomEvent("sr:data", { detail: r })); if (window.ScrollTrigger) ScrollTrigger.refresh(); })
     .catch(() => { $("spread").replaceChildren(el("p", { class: "body", text: "The data file didn't load. Refresh to try again." })); });
 })();
