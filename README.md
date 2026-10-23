@@ -6,6 +6,11 @@ It never says a decision was wrong. It shows decisions side by side, measures wh
 
 **Site:** https://shyamvasansathiskumar-ux.github.io/stewards-room/
 
+On the site you can:
+- **Run the ban clock** for any driver in the register: drag through the dates, see which points are live and when they fall away, and add what-if points to see how close a ban is. Points the FIA counted but the register can't see yet are shown separately, never filled in.
+- **Make the call** on 13 real incidents, worded exactly as the stewards printed them, then see their decision, their reason and the usual outcome under the same rule.
+- **Search and open the register**: filter by season and kind, search any wording, and open a row to read every field as printed, with a link to the FIA PDF.
+
 ## What it found first (14 hand-checked decisions, hand-picked, small sample)
 
 - **The 2026 points change shows up, so far.** Penalised collisions under Appendix L, Chapter IV, Article 2 d): 4 of 4 carried penalty points in 2025, 0 of 4 in 2026, matching the 2026 guidelines that keep points for dangerous, reckless or apparently deliberate driving. These 8 were picked by hand, so treat this as a pattern to test on the full fetch, not a result.
@@ -23,6 +28,7 @@ It never says a decision was wrong. It shows decisions side by side, measures wh
 | `sr/register.py` | Append-only, hash-chained, file-locked record of every PDF fetched. A replaced document is recorded with both hashes (on republish, or every time with `--refresh`); an edited line is found by `verify()`; the head hash goes into the published report so a cut-off end can be spotted. |
 | `sr/consistency.py` | Outcomes per article per season, the usual outcome, and every departure, marked explained / not explained / can't tell. |
 | `sr/fetch.py` | Lists and downloads documents from https://www.fia.com only (redirects included), one request every 1.5 s, cached by URL hash. One bad document is skipped, not fatal. |
+| `docs/interact.js` | The interactive parts of the site: the clock simulator, the incident game and the searchable register. Reads only `report.json`; all text is set as text, and links must point at fia.com. |
 | `sr/build.py` | Builds `docs/report.json`. Merges re-issued copies of one decision (same event and document number), dates each decision from the document itself, and scores the parser's structured fields on the hand-checked set. |
 
 ## Run it
